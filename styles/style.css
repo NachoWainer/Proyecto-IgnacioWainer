@@ -28,7 +28,7 @@
     font-size: 70px;
     text-align: center;
     text-decoration: solid;
-    background-color: #B2BD7E;}
+    }
 
 .subTitulo{
     font-family: 'Amatic SC', cursive;
@@ -70,7 +70,9 @@ header nav{
 /*cuerpo*/
 
 body{
-    background-color: #B2BD7E;
+    background: #DAD299;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #B0DAB9, #DAD299); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */   
 }
 
 body section h2{
@@ -82,7 +84,10 @@ body section h2{
 }
 
 #imagenEntrada{
-    background-color: #B2BD7E;
+    background: #DAD299;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #B0DAB9, #DAD299);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #B0DAB9, #DAD299); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     border-bottom: black solid 5px;
     border-top: black solid 4px;
     display: flex;
@@ -104,7 +109,7 @@ body section h2{
     display: flex;
     text-align: center;
     text-decoration: solid; 
-    background-image: url("./images/place/restaurante4.jpg");
+    background-image: url("../images/place/restaurante4.jpg");
 
     /* Set a specific height */
     min-height: 400px;
@@ -122,7 +127,7 @@ body section h2{
    
    
     display: block;
-    background-color: #B2BD7E;
+
     height: auto;
     width: 100%;  
 }
@@ -165,7 +170,6 @@ body section h2{
 #clientes{
     margin: 0px;
     padding: 0px;
-    background-color: #B2BD7E;
     height: auto;
     font-family: 'Gloria Hallelujah', cursive;
     
@@ -216,6 +220,7 @@ body section h2{
 #navegadorMenu{
     display: flex;
     justify-content: center;
+    
 }
 .comida img{
     justify-self: center;
@@ -224,6 +229,14 @@ body section h2{
     max-height: 100%;
     object-fit: contain;
 }
+.comida div:hover{
+    transform: scale(1.15);
+    transition: ease-in 0.5s;
+
+}
+
+
+
 .comida p {
     font-family: 'Gloria Hallelujah', cursive;
     font-weight: bold;
@@ -232,6 +245,7 @@ body section h2{
     text-decoration: wavy;
     width: 100%;
     text-align: center;
+    border: black solid 0.5px;
 
     background-color: #466B38;
 
@@ -263,7 +277,6 @@ body section h2{
     justify-content: center;
     align-content: center;}
 #reserve h1{
-    background-color: #466B38;
     padding-top: 70px;
    
 }
@@ -276,11 +289,12 @@ body section h2{
     justify-content: center;
     align-content: center;
 }
+
 #reservarUno{
 display: flex;
 text-align: center;
 text-decoration: solid; 
-background-image: url("./images/place/restaurant2.jpg");
+background-image: url("../images/place/restaurant2.jpg");
 
 /* Set a specific height */
 min-height: 400px;
@@ -296,7 +310,7 @@ background-size: cover;}
     display: flex;
 text-align: center;
 text-decoration: solid; 
-background-image: url("./images/place/restaurante6.jpg");
+background-image: url("../images/place/restaurante6.jpg");
 
 /* Set a specific height */
 min-height: 400px;
@@ -327,6 +341,10 @@ footer{
     align-items: center;
     justify-items: center;
 }
+footer div nav:hover {
+    transform: scale(1.5);
+    transition: ease-in 1s;
+}
 
 
 #mapa{
@@ -354,6 +372,69 @@ footer{
     object-fit: contain;
    
 }
+
+/*animations*/
+.angry-animate{
+    -webkit-animation:appear 1s ease 0s 1 normal;
+    -moz-animation:appear 1s ease 0s 1 normal;
+    -ms-animation:appear 1s ease 0s 1 normal;
+    animation:appear 1s ease 0s 1 normal;
+    }
+    
+    @-webkit-keyframes appear {
+    0%{ opacity: 0; -webkit-transform: scale3d(0.3, 0.3, 0.3); transform: scale3d(0.3, 0.3, 0.3); }
+    60%{ opacity: 1; -webkit-transform: scale3d(1,1,1); transform: scale3d(1,1,1); }
+    }
+    @keyframes appear {
+    0%{ opacity: 0; transform: scale3d(0.3, 0.3, 0.3); }
+    60%{ opacity: 1; transform: scale3d(1,1,1); }
+    }
+
+
+
+    .gradient {
+        background: linear-gradient(166deg, #dad299, #466b38);
+        background-size: 400% 400%;
+    
+        -webkit-animation: backGrad 9s ease infinite;
+        -moz-animation: backGrad 9s ease infinite;
+        animation: backGrad 9s ease infinite;
+    }
+    
+    @-webkit-keyframes backGrad {
+        0%{background-position:81% 0%}
+        50%{background-position:20% 100%}
+        100%{background-position:81% 0%}
+    }
+    @-moz-keyframes backGrad {
+        0%{background-position:81% 0%}
+        50%{background-position:20% 100%}
+        100%{background-position:81% 0%}
+    }
+    @keyframes backGrad {
+        0%{background-position:81% 0%}
+        50%{background-position:20% 100%}
+        100%{background-position:81% 0%}
+    }
+    
+
+.pulsar {
+	padding: 12px 24px;
+    background-color: white;
+    color: black;
+    border-radius: 7px;
+    transition: transform 250ms cubic-bezier(.2,.8,.4,1);
+  }
+
+.pulsar:hover {
+	transform: scale(1.10);
+  }
+
+.pulsar:active {
+	transform: scale(0.9);
+}
+
+
 
 /*Media Queries*/
 @media only screen and (max-width: 800px){
@@ -383,6 +464,56 @@ footer{
   
 
 }
+
+.aniNav {
+    padding-bottom: 1px;
+    color: black;
+    position: relative;
+}
+
+.aniNav::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    border-radius: 20%;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    transform: translateY(3px);
+    background: #DAD299;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.aniNav:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+.aniNavMenu {
+    padding-bottom: 1px;
+    color: black;
+    position: relative;
+}
+
+.aniNavMenu::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    border-radius: 20%;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    transform: translateY(3px);
+    background: black;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.aniNavMenu:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 @media only screen and (max-width: 576px){
     

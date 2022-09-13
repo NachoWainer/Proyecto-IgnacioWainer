@@ -14,30 +14,42 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav> <a href="../index.html"><img src="../images/icons/bosquebyn.png" alt=""></a></nav>
-        
-            <nav class="textoContenidoChico">
-                <a class="sinFormato aniNav" href="../index.html">HOME <img src="../images/icons/brote.png" alt=""></a>
-                <a class="sinFormato aniNav" href="./menu.html">MENU <img src="../images/icons/brote.png" alt=""></a>
-                <a class="sinFormato aniNav" href="../index.html#about">ABOUT US <img src="../images/icons/brote.png" alt=""></a>
-                <a class="sinFormato aniNav" href=#where>WHERE TO FIND US <img src="../images/icons/brote.png" alt=""></a>
-                <a class="sinFormato aniNav" href="./makereservation.html#reserve">MAKE A RESERVATION <img src="../images/icons/brote.png" alt=""></a>
+            <nav class="navbar navbar-expand-lg bg-light" id="navegador">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html"><img src="../images/icons/bosquebyn.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div class="navbar-nav">
+                    <a class="nav-link aniNav" href="../index.html">HOME <img src="../images/icons/brote.png" alt=""></a>
+                    <a class="nav-link active aniNav" aria-current="page" href="./menu.html">MENU <img src="../images/icons/brote.png" alt=""></a>
+                    <a class="nav-link aniNav" href="../index.html#about">ABOUT US <img src="../images/icons/brote.png" alt=""></a>
+                    <a class="nav-link aniNav" href=#where>WHERE TO FIND US <img src="../images/icons/brote.png" alt=""></a>
+                    <a class="nav-link aniNav" href="./makereservation.html#reserve">MAKE A RESERVATION <img src="../images/icons/brote.png" alt=""></a>
+                  </div>
+                </div>
+              </div>
             </nav>
-    </header>
     
 
 
     <section >
         <h1 class="titulo angry-animate">MENU</h1>
-        <div id="navegadorMenu">
-            <nav class="textoContenidoChico">
-                <a class="sinFormato aniNavMenu" href=#entree>ENTREE <img src="../images/icons/brote.png" alt=""></a>
-                <a class="sinFormato aniNavMenu" href=#main>MAIN <img src="../images/icons/brote.png" alt=""></a>
-                <a class="sinFormato aniNavMenu" href=#dessert>DESSERT <img src="../images/icons/brote.png" alt=""></a>
-                <a class="sinFormato aniNavMenu" href=#drinks>DRINKS <img src="../images/icons/brote.png" alt=""></a>
-            </nav>
-        </div>
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link active aniNavMenu" aria-current="page" href=#entree>ENTREE <img src="../images/icons/brote.png" alt=""></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link aniNavMenu" href=#main>MAIN <img src="../images/icons/brote.png" alt=""></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link aniNavMenu" href=#dessert >DESSERT <img src="../images/icons/brote.png" alt=""></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link aniNavMenu" href=#drinks>DRINKS <img src="../images/icons/brote.png" alt=""></a>
+          </li>
+        </ul>
         
     </section>
   
@@ -60,8 +72,6 @@
             </div>
 
             <div class="comida">
-
-
                 <div data-aos="fade-right" class="card"  style="width: 15rem;">
                     <img src="../images/entree/entree3.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -243,12 +253,16 @@
         </section>
 
         <section id="suggestions">
-            <h2 class="subTitulo"> Have any suggestions?</h2>
-            <div>
-                <textarea>please tell us!</textarea> 
-                <button class="pulsar">send</button>
+            <h1 class="titulo angry-animate"> Have any suggestions?</h1>
+            <div class="form-floating">
+              <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+              <label for="floatingTextarea2">Comments</label>
             </div>
-    
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary">Reserve!</button>
+                </div>
+              </form>
+            </div>
         </section>
         
         <footer>

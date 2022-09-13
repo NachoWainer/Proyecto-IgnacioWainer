@@ -281,6 +281,7 @@ body section h2{
    
 }
 
+
 form button{
     font-family: 'Gloria Hallelujah', cursive;
    
@@ -439,7 +440,9 @@ footer div nav:hover {
 
 .pulsar {
 	padding: 12px 24px;
-    background-color: white;
+    background-color: #466b38;
+    font-family: 'Gloria Hallelujah', cursive; ;
+    border: none;
     color: black;
     border-radius: 7px;
     transition: transform 250ms cubic-bezier(.2,.8,.4,1);
@@ -447,11 +450,16 @@ footer div nav:hover {
 
 .pulsar:hover {
 	transform: scale(1.10);
+    background-color: #dad299 !important;
+   
+
   }
 
 .pulsar:active {
 	transform: scale(0.9);
+   
 }
+
 
 
 

@@ -22,6 +22,7 @@
     font-size:medium;
 }
 
+
 .titulo{
     font-family: 'Amatic SC', cursive;
     font-weight: bold;
@@ -537,6 +538,7 @@ footer div nav:hover {
     padding-bottom: 1px;
     color: black;
     position: relative;
+    font-family: 'Gloria Hallelujah', cursive;
 }
 
 .aniNavMenu::after {
@@ -557,6 +559,12 @@ footer div nav:hover {
     opacity: 1;
     transform: translateY(0);
 }
+.nav-link:focus, .nav-link:hover{
+    color: black;
+}
+.nav{
+--bs-nav-link-color:black; 
+--bs-nav-link-hover-color: black;}
 
 
 

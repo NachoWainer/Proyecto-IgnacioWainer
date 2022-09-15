@@ -309,6 +309,10 @@ form button{
         border-radius: .375rem;
         transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     }
+.form-check-input:checked {
+        background-color: #466B38;
+        border-color: #466B38;
+    }
 
 
 

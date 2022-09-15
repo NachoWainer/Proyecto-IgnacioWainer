@@ -177,12 +177,10 @@ body section h2{
 }
 
 #boxClientes section div{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 10px;
-    justify-items: center;
-    align-items: center;
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
 }
 
 .opiniones{
@@ -441,6 +439,15 @@ footer div nav:hover {
         50%{background-position:20% 100%}
         100%{background-position:81% 0%}
     }
+    .gradient2 {
+        background: linear-gradient(166deg,#466b38, #dad299 );
+        background-size: 400% 400%;
+    
+        -webkit-animation: backGrad 9s ease infinite;
+        -moz-animation: backGrad 9s ease infinite;
+        animation: backGrad 9s ease infinite;
+    } 
+
     
 
 .pulsar {

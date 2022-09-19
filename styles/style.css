@@ -192,6 +192,15 @@ body section h2{
     flex-wrap: wrap;
     
 }
+#opinion1{
+    width: 18rem;
+}
+#opinion2{
+    width: 18rem;
+}
+#opinion3{
+    width: 18rem;
+}
 
 .opiniones img{
     border-radius: 50%;  
@@ -214,6 +223,7 @@ body section h2{
     justify-items: center;
     align-items: center;
     padding-top: 20px;
+    padding-bottom: 5px;
    
 }
 
@@ -505,6 +515,21 @@ footer div nav:hover {
         padding-top: 150px;
         font-size: 50px;
     }
+    #opinion1{
+        width: 10rem;
+    }
+    #opinion2{
+        width: 10rem;
+    }
+    #opinion3{
+        width: 10rem;
+    }
+    #boxClientes section div{
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+}
   
 
 }
@@ -617,9 +642,22 @@ footer div nav:hover {
         #suggestions input{
             width: 100%;
         }
+        element.style{
+            width: 100%;
+        }
+        .card-text{
+            font-size: 3vmin;
+        }
     
 }
 @media only screen and (max-width: 300px){
+   
+    .card-img, .card-img-bottom, .card-img-top {
+        width: 50%;
+    }
+    #opinion1.card.opiniones.gradient2.style {
+        width: 12rem;
+    }
     #boxClientes section div{
        display: flex;
        flex-direction: column;
@@ -635,4 +673,21 @@ footer div nav:hover {
         #suggestions input{
             width: 100%;
         }
+
+        #opinion1{
+            width: 10rem;
+        }
+        #opinion2{
+            width: 10rem;
+        }
+        #opinion3{
+            width: 10rem;
+        }
+        .card-text{
+            font-size: 5vmin;
+        }
+      
+
+        
+
 }

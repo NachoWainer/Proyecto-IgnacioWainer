@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plant Experiece</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="shortcut icon" href="../images/icons/brote.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,179 +14,250 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav> <a href="../index.html"><img src="../images/icons/bosquebyn.png" alt=""></a></nav>
-        
-            <nav class="textoContenidoChico">
-                <a class="sinFormato aniNav" href="../index.html">HOME <img src="../images/icons/brote.png" alt=""></a>
-                <a class="sinFormato aniNav" href="./menu.html">MENU <img src="../images/icons/brote.png" alt=""></a>
-                <a class="sinFormato aniNav" href="../index.html#about">ABOUT US <img src="../images/icons/brote.png" alt=""></a>
-                <a class="sinFormato aniNav" href=#where>WHERE TO FIND US <img src="../images/icons/brote.png" alt=""></a>
-                <a class="sinFormato aniNav" href="./makereservation.html#reserve">MAKE A RESERVATION <img src="../images/icons/brote.png" alt=""></a>
+            <nav class="navbar navbar-expand-lg bg-light" id="navegador">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html"><img src="../images/icons/bosquebyn.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div class="navbar-nav">
+                    <a class="nav-link aniNav" href="../index.html">HOME <img src="../images/icons/brote.png" alt=""></a>
+                    <a class="nav-link active aniNav" aria-current="page" href="./menu.html">MENU <img src="../images/icons/brote.png" alt=""></a>
+                    <a class="nav-link aniNav" href="../index.html#about">ABOUT US <img src="../images/icons/brote.png" alt=""></a>
+                    <a class="nav-link aniNav" href=#where>WHERE TO FIND US <img src="../images/icons/brote.png" alt=""></a>
+                    <a class="nav-link aniNav" href="./makereservation.html#reserve">MAKE A RESERVATION <img src="../images/icons/brote.png" alt=""></a>
+                  </div>
+                </div>
+              </div>
             </nav>
-    </header>
     
 
 
     <section >
         <h1 class="titulo angry-animate">MENU</h1>
-        <div id="navegadorMenu">
-            <nav class="textoContenidoChico">
-                <a class="sinFormato aniNavMenu" href=#entree>ENTREE <img src="../images/icons/brote.png" alt=""></a>
-                <a class="sinFormato aniNavMenu" href=#main>MAIN <img src="../images/icons/brote.png" alt=""></a>
-                <a class="sinFormato aniNavMenu" href=#dessert>DESSERT <img src="../images/icons/brote.png" alt=""></a>
-                <a class="sinFormato aniNavMenu" href=#drinks>DRINKS <img src="../images/icons/brote.png" alt=""></a>
-            </nav>
-        </div>
+        <ul class="nav justify-content-center">
+          <li class="nav-item aniNavMenu">
+            <a class="nav-link active " aria-current="page" href=#entree>ENTREE <img src="../images/icons/brote.png" alt=""></a>
+          </li>
+          <li class="nav-item aniNavMenu">
+            <a class="nav-link" href=#main>MAIN <img src="../images/icons/brote.png" alt=""></a>
+          </li>
+          <li class="nav-item aniNavMenu">
+            <a class="nav-link" href=#dessert >DESSERT <img src="../images/icons/brote.png" alt=""></a>
+          </li>
+          <li class="nav-item aniNavMenu">
+            <a class="nav-link " href=#drinks>DRINKS <img src="../images/icons/brote.png" alt=""></a>
+          </li>
+        </ul>
         
     </section>
   
 
         <section id="entree" data-aos="zoom-in">
             <h2 class="menuOpcion"> ENTREE</h2>
-            <div class="comida ">
-                <div data-aos="fade-right">
-                    <img  src="../images/entree/entree1.jpg">
-                    <p>Roasted Sweet potatoes with tahini mayo</p>
+            <div class="comida">
+            <div class="card" data-aos="fade-right" style="width: 15rem;">
+                <img src="../images/entree/entree1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Roasted Sweet potatoes with tahini mayo</p>
                 </div>
-                <div data-aos="fade-left">
-                    <img src="../images/entree/Entree2.jpg">
-                    <p>Fries with Hoisin & Sriracha mayo</p>
+              </div>
+              <div class="card" data-aos="fade-left" style="width: 15rem;">
+                <img src="../images/entree/Entree2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Fries with Hoisin & Sriracha mayo</p>
                 </div>
+              </div>
             </div>
 
             <div class="comida">
-                <div data-aos="fade-right">
-                    <img src="../images/entree/entree3.jpg">
-                    <p>Tomato bruschetta with balsamic reduction</p>
-                </div>
-                <div data-aos="fade-left">
-                    <img src="../images/entree/entree4.jpg">
-                    <p>Fresh salad rice rolls with peanut sauce</p>
-                </div>
+                <div data-aos="fade-right" class="card"  style="width: 15rem;">
+                    <img src="../images/entree/entree3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Tomato bruschetta with balsamic reduction</p>
+                    </div>
+                  </div>
+                  <div class="card" data-aos="fade-left" style="width: 15rem;">
+                    <img src="../images/entree/entree4.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Fresh salad rice rolls with peanut sauce</p>
+                    </div>
+                  </div>
+
             </div>
 
+
+
+
             <div class="comida">
-                <div data-aos="fade-right">
-                    <img src="../images/entree/entree5.jpg">
-                    <p>Garlic & Lemon Hummus with crackers</p>
-                </div>
-                <div data-aos="fade-left">
-                    <img src="../images/entree/entree6.jpg">
-                    <p>Nachos & Guacamole</p>
-                </div>
+
+                <div data-aos="fade-right" class="card" style="width: 15rem;">
+                    <img src="../images/entree/entree5.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Garlic & Lemon Hummus with crackers</p>
+                    </div>
+                  </div>
+                  <div class="card" data-aos="fade-left" style="width: 15rem;">
+                    <img src="../images/entree/entree6.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Nachos & Guacamole</p>
+                    </div>
+                  </div>
             </div>
         </section>
 
         <section id="main" data-aos="zoom-in">
             <h2 class="menuOpcion"> MAIN</h2>
             <div class="comida">
-                <div data-aos="fade-right">
-                    <img src="../images/main/main1.jpg">
-                    <p>creamy harissa pasta</p>
-                </div>
-                <div data-aos="fade-left">
-                    <img src="../images/main/main2.jpg">
-                    <p>Mushroom & bean coconut curry</p>
-                </div>
+
+                <div data-aos="fade-right" class="card" style="width: 15rem;">
+                    <img src="../images/main/main1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">creamy harissa pasta</p>
+                    </div>
+                  </div>
+                  <div class="card" data-aos="fade-left" style="width: 15rem;">
+                    <img src="../images/main/main2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Mushroom & bean coconut curry</p>
+                    </div>
+                  </div>
             </div>
             <div class="comida">
-                <div data-aos="fade-right">
-                    <img src="../images/main/main3.jpg">
-                    <p>Roasted vegetable salad with crispy chickpeas</p>
-                </div>
-                <div data-aos="fade-left">
-                    <img src="../images/main/main4.jpg">
-                    <p>Sun-dried tomato & roasted vegetable tart</p>
-                </div>
+
+                <div data-aos="fade-right" class="card" style="width: 15rem;">
+                    <img src="../images/main/main3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Roasted vegetable salad with crispy chickpeas</p>
+                    </div>
+                  </div>
+                  <div class="card" data-aos="fade-left" style="width: 15rem;">
+                    <img src="../images/main/main4.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Sun-dried tomato & roasted vegetable tart</p>
+                    </div>
+                  </div>
             </div>
             <div class="comida">
-                <div data-aos="fade-right">
-                    <img src="../images/main/main5.jpg">
-                    <p>Cauliflower pizza</p>
-                </div>
-                <div data-aos="fade-left">
-                    <img src="../images/main/main6.jpg">
-                    <p>Oyster mushroom curry salad sandwich</p>
-                </div>
-            </div>
+                <div data-aos="fade-right" class="card" style="width: 15rem;">
+                    <img src="../images/main/main5.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Cauliflower pizza</p>
+                    </div>
+                  </div>
+                  <div class="card" data-aos="fade-left" style="width: 15rem;">
+                    <img src="../images/main/main6.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Oyster mushroom curry salad sandwich</p>
+                    </div>
+                  </div>
+                
         </section>
 
         <section id="dessert" data-aos="zoom-in">
             <h2 class="menuOpcion"> DESSERT</h2>
             <div class="comida">
-                <div data-aos="fade-right">
-                    <img src="../images/dessert/dessert1.jpg">
-                    <p>Vegan chocolate cake</p>
+              <div data-aos="fade-right" class="card" style="width: 15rem;">
+                <img src="../images/dessert/dessert1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Vegan chocolate cake</p>
                 </div>
-                <div data-aos="fade-left">
-                    <img src="../images/dessert/dessert2.jpg">
-                    <p>Banana bread in a mug</p>
-                </div>  
+              </div>
+              <div class="card" data-aos="fade-left" style="width: 15rem;">
+                <img src="../images/dessert/dessert2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Banana bread in a mug</p>
+                </div>
+              </div>
             </div>
             <div class="comida">
-                <div data-aos="fade-right">
-                    <img src="../images/dessert/dessert3.jpg">
-                    <p>Double chocolate mug cake</p>
+              <div data-aos="fade-right" class="card" style="width: 15rem;">
+                <img src="../images/dessert/dessert3.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Double chocolate mug cake</p>
                 </div>
-                <div data-aos="fade-left">
-                    <img src="../images/dessert/dessert4.jpg">
-                    <p>Tea-infused chocolate mousse</p>
+              </div>
+              <div class="card" data-aos="fade-left" style="width: 15rem;">
+                <img src="../images/dessert/dessert4.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Tea-infused chocolate mousse</p>
                 </div>
+              </div>
             </div>
+
             <div class="comida">
-                <div data-aos="fade-right">
-                    <img src="../images/dessert/dessert5.jpg">
-                    <p>Tropical coconut popsicles</p>
+              <div data-aos="fade-right" class="card" style="width: 15rem;">
+                <img src="../images/dessert/dessert5.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Tropical coconut popsicles</p>
                 </div>
-                <div data-aos="fade-left">
-                    <img src="../images/dessert/dessert6.jpg">
-                    <p>Coconut lemon custard tart</p>
+              </div>
+              <div class="card" data-aos="fade-left" style="width: 15rem;">
+                <img src="../images/dessert/dessert6.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Coconut lemon custard tart</p>
                 </div>
+              </div>
             </div>
         </section>
 
         <section id="drinks" data-aos="zoom-in">
             <h2 class="menuOpcion"> DRINKS</h2>
             <div class="comida">
-                <div data-aos="fade-right">
-                    <img src="../images/drinks/drink9.jpg">
-                    <p>Grapefruit rosemary spritzer</p>
+
+              <div data-aos="fade-right" class="card" style="width: 15rem;">
+                <img src="../images/drinks/drink9.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Grapefruit rosemary spritzer</p>
                 </div>
-                <div data-aos="fade-left">
-                    <img src="../images/drinks/drink2.jpg">
-                    <p>Coconut & citrus green smoothie</p>
+              </div>
+              <div class="card" data-aos="fade-left" style="width: 15rem;">
+                <img src="../images/drinks/drink2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Coconut & citrus green smoothie</p>
                 </div>
+              </div>
             </div>
             <div class="comida">
-                <div data-aos="fade-right">
-                    <img src="../images/drinks/drink10.jpg">
-                    <p>Golden milk</p>
+
+              <div data-aos="fade-right" class="card" style="width: 15rem;">
+                <img src="../images/drinks/drink9.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Golden milk</p>
                 </div>
-                <div data-aos="fade-left">
-                    <img src="../images/drinks/drink4.jpg">
-                    <p>Blue butterfly pea latte</p>
+              </div>
+              <div class="card" data-aos="fade-left" style="width: 15rem;">
+                <img src="../images/drinks/drink2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Blue butterfly pea latte</p>
                 </div>
-            </div>
+              </div>
+          </div>
             <div class="comida">
-                <div data-aos="fade-right">
-                    <img src="../images/drinks/drink5.jpg">
-                    <p>Pink lemonade</p>
+
+
+              <div data-aos="fade-right" class="card" style="width: 15rem;">
+                <img src="../images/drinks/drink5.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Pink lemonade</p>
                 </div>
-                <div data-aos="fade-left">
-                    <img src="../images/drinks/drink7.jpg">
-                    <p>Peach thyme iced tea</p>
+              </div>
+              <div class="card" data-aos="fade-left" style="width: 15rem;">
+                <img src="../images/drinks/drink7.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Peach thyme iced tea</p>
                 </div>
             </div>
+          
         </section>
 
         <section id="suggestions">
-            <h2 class="subTitulo"> Have any suggestions?</h2>
+            <h1 class="titulo angry-animate"> Have any suggestions?</h1>
             <div>
-                <textarea>please tell us!</textarea> 
-                <button class="pulsar">send</button>
+            <input placeholder="Your opinion matters..." >  </input>
+            <button type="submit" class="pulsar btn btn-primary">SEND</button>
             </div>
-    
         </section>
         
         <footer>
@@ -211,7 +283,7 @@
     </footer>
 
         
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();

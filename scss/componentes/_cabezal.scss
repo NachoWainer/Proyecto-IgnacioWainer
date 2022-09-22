@@ -1,0 +1,27 @@
+
+/*cabezal*/
+.navegadorCentrado{
+    display: flex;
+    justify-content: center;
+
+}
+#navegador{ 
+    background-color:$color-principal !important;
+    display: flex;
+    position: sticky;
+    justify-content: space-between;
+    align-content: flex-end;
+    top: 0px;
+    border-bottom: 2px solid $color-delim-sections;
+    width: 100%;
+    z-index: 10;
+}
+
+ #navegador {
+    div{
+        align-self: flex-end;
+        justify-content: flex-end;
+        font-family: 'Gloria Hallelujah', cursive;
+        font-size:large;
+    }
+}

@@ -1,0 +1,52 @@
+/*pie de pagina*/
+
+ul{
+    list-style-type:none; 
+    display: flex;
+}
+
+footer{
+    background-color: $color-principal;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+    div{
+        nav{
+            &:hover{
+            transform: scale(1.5);
+            transition: ease-in 1s;
+            }
+        }
+    }
+}
+
+
+#mapa{
+    justify-self: right;
+}
+#where{
+    justify-self: baseline;
+    align-self: baseline;
+    ul{
+    justify-content: space-between;
+        li{ 
+            img{
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;  
+                }
+            }
+        }
+}
+
+.map{
+    display: block;
+    width: 150px;
+    height: 150px;
+    max-width: 100%;
+    max-height: 25%;
+    object-fit: contain;
+   
+}

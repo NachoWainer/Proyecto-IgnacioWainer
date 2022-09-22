@@ -1,0 +1,41 @@
+/*Tipografias*/
+.sinFormato {
+    text-decoration: none;
+    color: $color-font;
+    text-align: right; 
+}
+.textoContenido{
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size:large;
+}
+.textoContenidoChico{
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size:medium;
+}
+.textoContenidoChico2{
+    font-family: 'Amatic SC', cursive;
+    font-size:medium;
+}
+
+
+.titulo{
+    font-family: 'Amatic SC', cursive;
+    font-weight: bold;
+    font-size: 70px;
+    text-align: center;
+    text-decoration: solid;
+    }
+
+.subTitulo{
+    font-family: 'Amatic SC', cursive;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    text-decoration: wavy;
+    
+
+}
+.texto2{
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+}

@@ -6,13 +6,16 @@ body{
     background: -webkit-linear-gradient(to right, $gradient-con-secundario, $color-secundario);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, $gradient-con-secundario, $color-secundario); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */   
 
- section{ h2{
-    text-align: center;
-    text-decoration: solid;
-    font-family: 'Amatic SC', cursive;
-    font-size: 50px;
+ section{ 
+        h2{
+            text-align: center;
+            text-decoration: solid;
+            font-family: 'Amatic SC', cursive;
+            font-size: 50px;
 
-}}}
+        }
+    }
+}
 
 #imagenEntrada{
     background: $color-secundario;  /* fallback for old browsers */
@@ -26,6 +29,7 @@ body{
 }
 
 #imagenprimera{
+    
     max-width: 100%;
     height: auto;
     margin: 0;
@@ -35,20 +39,11 @@ body{
 
 
 #imagenEntradaDos{
-    
-    display: flex;
-    text-align: center;
-    text-decoration: solid; 
+    @extend .paralax;
     background-image: url("../images/place/restaurante4.jpg");
-
-    /* Set a specific height */
-    min-height: 400px;
-  
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; 
+    @media only screen and (max-width: 576px){
+        display: none !important;
+    }
 }
 /*-----------------------------------------------------*/
 #about{
@@ -57,9 +52,8 @@ body{
    
    
     display: block;
-
-    height: auto;
-    width: 100%;
+    @include sizeWH(100%,auto);
+   
     h2{
         padding-top:70px;
         font-size: 50px;

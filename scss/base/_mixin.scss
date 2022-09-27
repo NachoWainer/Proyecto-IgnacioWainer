@@ -1,0 +1,6 @@
+/*cartas de comida*/
+
+@mixin sizeWH($width, $height){
+    height: $height;
+    width: $width;
+}

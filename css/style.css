@@ -1,4 +1,4 @@
-/*Tipografias*/
+/*cartas de comida*/ /*Tipografias*/
 .sinFormato {
   text-decoration: none;
   color: black;
@@ -58,7 +58,6 @@
   width: 100%;
   z-index: 10;
 }
-
 #navegador div {
   align-self: flex-end;
   justify-content: flex-end;
@@ -97,17 +96,12 @@ body section h2 {
 }
 
 #imagenEntradaDos {
-  display: flex;
-  text-align: center;
-  text-decoration: solid;
   background-image: url("../images/place/restaurante4.jpg");
-  /* Set a specific height */
-  min-height: 400px;
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+}
+@media only screen and (max-width: 576px) {
+  #imagenEntradaDos {
+    display: none !important;
+  }
 }
 
 /*-----------------------------------------------------*/
@@ -233,13 +227,29 @@ footer div nav:hover {
 
 .map {
   display: block;
-  width: 150px;
   height: 150px;
+  width: 150px;
   max-width: 100%;
   max-height: 25%;
   object-fit: contain;
 }
 
+/*--------------paralax----------------*/
+.paralax, #reservarDos, #reservarUno, #imagenEntradaDos {
+  display: flex;
+  border-bottom: solid black 5px;
+  text-align: center;
+  text-decoration: solid;
+  /* Set a specific height */
+  min-height: 400px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*selector de colores*/
 * {
   margin: 0;
   padding: 0;
@@ -347,32 +357,12 @@ form button {
 }
 
 #reservarUno {
-  display: flex;
-  text-align: center;
-  text-decoration: solid;
   background-image: url("../images/place/restaurant2.jpg");
   /* Set a specific height */
-  min-height: 400px;
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 #reservarDos {
-  display: flex;
-  border-bottom: solid black 5px;
-  text-align: center;
-  text-decoration: solid;
   background-image: url("../images/place/restaurante6.jpg");
-  /* Set a specific height */
-  min-height: 400px;
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 /*animations*/

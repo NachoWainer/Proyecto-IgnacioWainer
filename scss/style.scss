@@ -1,8 +1,12 @@
 @import "./base/_colores";
+@import "./base/mixin";
 @import "./componentes/tipografias";
 @import "./componentes/cabezal";
 @import "./componentes/index";
 @import "./componentes/footer";
+@import "./base/extend";
+
+@import "./base/map";
 
 *{
     margin: 0;
@@ -32,7 +36,7 @@
 
 
 .card{
-    background-color: $color-principal;
+    background-color: map-get($mapa-color-principal,normal);
 }
 .card-text {
     font-family: 'Gloria Hallelujah', cursive;
@@ -55,7 +59,7 @@
     border-bottom: black solid 2px;
     padding-bottom: 5px;
     h2{
-        background-color: $color-principal;
+        background-color: map-get($mapa-color-principal,normal);
     }
     input{
         width: 500px;
@@ -126,37 +130,17 @@ form button{
 
 
 #reservarUno{
-display: flex;
-text-align: center;
-text-decoration: solid; 
-background-image: url("../images/place/restaurant2.jpg");
-
+    @extend .paralax;
+    background-image: url("../images/place/restaurant2.jpg");
 /* Set a specific height */
-min-height: 400px;
-
-/* Create the parallax scrolling effect */
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;}
+}
 
 
 #reservarDos{
-    display: flex;
-    border-bottom: solid black 5px;
-text-align: center;
-text-decoration: solid; 
-background-image: url("../images/place/restaurante6.jpg");
+    @extend .paralax;
+    background-image: url("../images/place/restaurante6.jpg");
 
-/* Set a specific height */
-min-height: 400px;
-
-/* Create the parallax scrolling effect */
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;}
-
+}
 
 
 
@@ -183,7 +167,7 @@ background-size: cover;}
 
 
     .gradient {
-        background: linear-gradient(166deg, $color-secundario, $color-principal);
+        background: linear-gradient(166deg, map-get($mapa-color-secundario,normal), map-get($mapa-color-principal,normal));
         background-size: 400% 400%;
     
         -webkit-animation: backGrad 9s ease infinite;
@@ -207,7 +191,7 @@ background-size: cover;}
         100%{background-position:81% 0%}
     }
     .gradient2 {
-        background: linear-gradient(166deg,$color-principal, $color-secundario );
+        background: linear-gradient(166deg,map-get($mapa-color-principal,normal), map-get($mapa-color-secundario,normal));
         background-size: 400% 400%;
     
         -webkit-animation: backGrad 9s ease infinite;
@@ -253,7 +237,7 @@ background-size: cover;}
         bottom: 0;
         opacity: 0;
         transform: translateY(3px);
-        background: $color-secundario;
+        background: map-get($mapa-color-secundario,normal);
         transition: opacity 0.2s ease, transform 0.2s ease;
 
     }

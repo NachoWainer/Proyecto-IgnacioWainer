@@ -1,3 +1,12 @@
+/*--------------------INICIALIZACION------------*/
+*{
+    margin: 0;
+    padding: 0; 
+} 
+html{
+    font-size: 62.5% !important;
+}
+
 @import "./base/_colores";
 @import "./base/mixin";
 @import "./componentes/tipografias";
@@ -7,13 +16,13 @@
 @import "./base/extend";
 @import "./base/map";
 
-*{
-    margin: 0;
-    padding: 0; 
-} 
+
 
 
 /*------------MENU-------------------------*/
+/*LOS ALIMENTOS SE ESTRUCTURAN POR SECCIONES NAVEGABLES POR UN NAV
+ORDENADOS POR CATEOGRIA EN 2 FILAS y COLUMNAS SUFICIENTES 
+CUANDO EL TAMAÑO SE HACE MUY PEQUEÑO PASA A 1 COLUMNA*/
 
 .comida{
     display: grid;
@@ -25,14 +34,11 @@
     padding-bottom: 5px;
    
 }
-
 #navegadorMenu{
     display: flex;
     justify-content: center;
     
 }
-
-
 
 .card{
     background-color: map-get($mapa-color-principal,normal);
@@ -40,22 +46,26 @@
 .card-text {
     font-family: 'Gloria Hallelujah', cursive;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 2rem;
     text-align: center;
     text-decoration: wavy;
-}
+    @media only screen and (max-width: 1024px){
+        font-size: 1.5rem;
+    }}
+
 
 .menuOpcion{
     background-color: $color-principal;
+   
 }
 
-
+/*TEXT AREA PARA ENVIAR SUGERENCIAS ACERCA DEL MENU*/
 #suggestions{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-bottom: black solid 2px;
+    border-bottom: $color-terciario solid 2px;
     padding-bottom: 5px;
     h2{
         background-color: map-get($mapa-color-principal,normal);
@@ -72,9 +82,13 @@
 
     /*-------------------RESERVAS-------------------------*/
 
+    /*APARTADO PARA REALIZAR LAS RESERVAS DEL RESTAURANTE
+    UN FORM CON NOMBRE, DIA DE LA SEMANA, HORA y CANTIDAD DE PERSONAS
+    ESTA DELIMITADO POR 2 IMAGENES DEL LUGAR CON PARALAX*/
+
 #reserve{
-    border-top: black solid 5px;
-    border-bottom: black solid 5px;
+    border-top: $color-border solid 5px;
+    border-bottom: $color-border solid 5px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 2fr;
@@ -86,7 +100,7 @@
 }
 
 .formBox{
-    border: $color-delim-sections solid 5px ;
+    border: $color-border solid 5px ;
     background-color: $gradient-con-secundario;
     font-family: 'Gloria Hallelujah', cursive;
    font-size: large;
@@ -145,9 +159,11 @@ form button{
 
 
 
-
+/*ANIMACIONES DE LOS DISTINTOS COMPONENTES*/
 /*animations*/
-.angry-animate{
+.angry-animate{ 
+    /*ANIMACION DE LOS TITULOS h1, AL APARECER EN PANTALLA EL TEXTO PARTE DESDE EL CENTRO INVISIBLE 
+    Y SE AGRANDA HASTA ADOPTAR SU TAMAÑO*/
     -webkit-animation:appear 1s ease 0s 1 normal;
     -moz-animation:appear 1s ease 0s 1 normal;
     -ms-animation:appear 1s ease 0s 1 normal;
@@ -164,7 +180,7 @@ form button{
     }
 
 
-
+/*GRADIENTES ANIMADOS, GENERA EL EFECTO DEL FONDO EN EL INDEX Y RESERVAS*/
     .gradient {
         background: linear-gradient(166deg, map-get($mapa-color-secundario,normal), map-get($mapa-color-principal,normal));
         background-size: 400% 400%;
@@ -189,7 +205,8 @@ form button{
         50%{background-position:20% 100%}
         100%{background-position:81% 0%}
     }
-    .gradient2 {
+    .gradient2 {/*COLOR GRADIENTE ANIMADO DEL FONDO DE LOS OPINION BOXES EN EL INDEX
+        ES EL GRADIENTE INVERSO AL FONDO DE LA SECCION Y LA PAGINA*/
         background: linear-gradient(166deg,map-get($mapa-color-principal,normal), map-get($mapa-color-secundario,normal));
         background-size: 400% 400%;
     
@@ -197,20 +214,42 @@ form button{
         -moz-animation: backGrad 9s ease infinite;
         animation: backGrad 9s ease infinite;
     } 
+/*-------------------------SCROLLBAR CUSTOM----------------*/
 
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: map-get($mapa-color-principal,oscuro);
+    
+   
+
+ 
+  }
+  
+  ::-webkit-scrollbar-thumb:vertical
+{
+    background:black url("../images/treeBark.jpg") repeat-y;
+    background-size:26px 63px;  
+    
+}
+  
     
 
-.pulsar {
+.pulsar { /*ANIMACION PARA PULSADORES DE LA PAGINA*/
 	padding: 12px 24px;
     background-color: $color-principal;
     font-family: 'Gloria Hallelujah', cursive; ;
     border: none;
-    color: black;
+    color: $color-border;
     border-radius: 5px;
     transition: transform 250ms cubic-bezier(.2,.8,.4,1);
     &:hover{
         transform: scale(1.10);
-        background-color: black !important;
+        background-color: $color-terciario !important;
 
     }
     &:active {
@@ -221,10 +260,11 @@ form button{
 
   }
 
+  /*ANIMACION PARA LA BARRA DE NAVEGACION, AL PASAR EL MOUSE POR LOS ELEMENTOS APARECE UNA BARRITA DEBAJO*/
 
 .aniNav {
     padding-bottom: 2px;
-    color: black;
+    color: $color-border;
     position: relative;
     &::after{
         content: '';
@@ -251,9 +291,10 @@ form button{
 
 
 
+
 .aniNavMenu {
     padding-bottom: 1px;
-    color: black;
+    color: $color-border;
     position: relative;
     font-family: 'Gloria Hallelujah', cursive;
 }
@@ -268,7 +309,7 @@ form button{
     bottom: 0;
     opacity: 0;
     transform: translateY(3px);
-    background: black;
+    background: $color-border;
     transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
@@ -277,11 +318,11 @@ form button{
     transform: translateY(0);
 }
 .nav-link:focus, .nav-link:hover{
-    color: black;
+    color: $color-border;
 }
 .nav{
---bs-nav-link-color:black; 
---bs-nav-link-hover-color: black;}
+--bs-nav-link-color:$color-border; 
+--bs-nav-link-hover-color: $color-border;}
 /*Media Queries*/
 @media only screen and (max-width: 800px){
     header {
@@ -303,17 +344,16 @@ form button{
         }
     }
     #about h2{
-        padding-top: 150px;
         font-size: 50px;
     }
     #opinion1{
-        width: 10rem;
+        width: 14rem;
     }
     #opinion2{
-        width: 10rem;
+        width: 14rem;
     }
     #opinion3{
-        width: 10rem;
+        width: 14rem;
     }
     #boxClientes{
         section{
@@ -324,6 +364,9 @@ form button{
                     align-items: center;
                 }
             }
+    }
+    .card-text{
+        font-size: 1.5rem;
     }
 }
 
@@ -387,9 +430,19 @@ form button{
         element.style{
             width: 100%;
         }
-        .card-text{
-            font-size: 20px;
+        #opinion1{
+            width: 14rem;
         }
+        #opinion2{
+            width: 14rem;
+        }
+        #opinion3{
+            width: 14rem;
+        }
+        .card-text{
+            font-size: 1.25rem;
+        }
+       
     
 }
 @media only screen and (max-width: 300px){

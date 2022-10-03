@@ -1,5 +1,5 @@
 /*selector de colores*/
 
-$mapa-color-principal:(normal:$color-principal,claro:lighten($color-principal,40%), oscuro: darken($color-principal,40%));
+$mapa-color-principal:(normal:$color-principal,claro:lighten($color-principal,40%), oscuro: darken($color-principal,10%));
 
 $mapa-color-secundario:(normal:$color-secundario,claro:lighten($color-secundario,40%), oscuro: darken($color-secundario,40%));

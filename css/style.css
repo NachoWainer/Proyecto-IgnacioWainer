@@ -1,3 +1,14 @@
+@charset "UTF-8";
+/*--------------------INICIALIZACION------------*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5% !important;
+}
+
 /*cartas de comida*/ /*Tipografias*/
 .sinFormato {
   text-decoration: none;
@@ -7,23 +18,23 @@
 
 .textoContenido {
   font-family: "Gloria Hallelujah", cursive;
-  font-size: large;
+  font-size: 2rem;
 }
 
 .textoContenidoChico {
   font-family: "Gloria Hallelujah", cursive;
-  font-size: medium;
+  font-size: 1.5rem;
 }
 
 .textoContenidoChico2 {
   font-family: "Amatic SC", cursive;
-  font-size: medium;
+  font-size: 1.5rem;
 }
 
 .titulo {
   font-family: "Amatic SC", cursive;
   font-weight: bold;
-  font-size: 70px;
+  font-size: 7rem;
   text-align: center;
   text-decoration: solid;
 }
@@ -31,14 +42,14 @@
 .subTitulo {
   font-family: "Amatic SC", cursive;
   font-weight: bold;
-  font-size: 50px;
+  font-size: 5rem;
   text-align: center;
   text-decoration: wavy;
 }
 
 .texto2 {
   font-family: "Amatic SC", cursive;
-  font-size: 30px;
+  font-size: 2rem;
 }
 
 /*cabezal*/
@@ -54,7 +65,7 @@
   justify-content: space-between;
   align-content: flex-end;
   top: 0px;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #644117;
   width: 100%;
   z-index: 10;
 }
@@ -75,15 +86,15 @@ body section h2 {
   text-align: center;
   text-decoration: solid;
   font-family: "Amatic SC", cursive;
-  font-size: 50px;
+  font-size: 5rem;
 }
 
 #imagenEntrada {
   background: #DAD299; /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #B0DAB9, #DAD299); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #B0DAB9, #DAD299); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  border-bottom: black solid 5px;
-  border-top: black solid 4px;
+  border-bottom: #644117 solid 5px;
+  border-top: #644117 solid 4px;
   display: flex;
 }
 
@@ -114,13 +125,13 @@ body section h2 {
 }
 #about h2 {
   padding-top: 70px;
-  font-size: 50px;
+  font-size: 5rem;
 }
 
 #boxAbout {
   padding-bottom: 5px;
   padding-top: 0px;
-  border-bottom: black solid 5px;
+  border-bottom: #644117 solid 5px;
   width: auto;
 }
 
@@ -185,8 +196,24 @@ body section h2 {
 
 #boxClientes {
   padding-bottom: 20px;
-  border-top: black solid 5px;
-  border-bottom: black solid 5px;
+  border-top: #644117 solid 5px;
+  border-bottom: #644117 solid 5px;
+}
+
+.row {
+  align-items: center;
+}
+@media only screen and (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .col-md-5 {
+    max-width: fit-content;
+  }
 }
 
 /*pie de pagina*/
@@ -250,12 +277,10 @@ footer div nav:hover {
 }
 
 /*selector de colores*/
-* {
-  margin: 0;
-  padding: 0;
-}
-
 /*------------MENU-------------------------*/
+/*LOS ALIMENTOS SE ESTRUCTURAN POR SECCIONES NAVEGABLES POR UN NAV
+ORDENADOS POR CATEOGRIA EN 2 FILAS y COLUMNAS SUFICIENTES 
+CUANDO EL TAMAÑO SE HACE MUY PEQUEÑO PASA A 1 COLUMNA*/
 .comida {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -278,21 +303,27 @@ footer div nav:hover {
 .card-text {
   font-family: "Gloria Hallelujah", cursive;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 2rem;
   text-align: center;
   text-decoration: wavy;
+}
+@media only screen and (max-width: 1024px) {
+  .card-text {
+    font-size: 1.5rem;
+  }
 }
 
 .menuOpcion {
   background-color: #466B38;
 }
 
+/*TEXT AREA PARA ENVIAR SUGERENCIAS ACERCA DEL MENU*/
 #suggestions {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-bottom: black solid 2px;
+  border-bottom: #644117 solid 2px;
   padding-bottom: 5px;
 }
 #suggestions h2 {
@@ -304,6 +335,9 @@ footer div nav:hover {
 }
 
 /*-------------------RESERVAS-------------------------*/
+/*APARTADO PARA REALIZAR LAS RESERVAS DEL RESTAURANTE
+UN FORM CON NOMBRE, DIA DE LA SEMANA, HORA y CANTIDAD DE PERSONAS
+ESTA DELIMITADO POR 2 IMAGENES DEL LUGAR CON PARALAX*/
 #reserve {
   border-top: black solid 5px;
   border-bottom: black solid 5px;
@@ -365,8 +399,11 @@ form button {
   background-image: url("../images/place/restaurante6.jpg");
 }
 
+/*ANIMACIONES DE LOS DISTINTOS COMPONENTES*/
 /*animations*/
 .angry-animate {
+  /*ANIMACION DE LOS TITULOS h1, AL APARECER EN PANTALLA EL TEXTO PARTE DESDE EL CENTRO INVISIBLE 
+  Y SE AGRANDA HASTA ADOPTAR SU TAMAÑO*/
   -webkit-animation: appear 1s ease 0s 1 normal;
   -moz-animation: appear 1s ease 0s 1 normal;
   -ms-animation: appear 1s ease 0s 1 normal;
@@ -395,6 +432,7 @@ form button {
     transform: scale3d(1, 1, 1);
   }
 }
+/*GRADIENTES ANIMADOS, GENERA EL EFECTO DEL FONDO EN EL INDEX Y RESERVAS*/
 .gradient {
   background: linear-gradient(166deg, #DAD299, #466B38);
   background-size: 400% 400%;
@@ -436,7 +474,8 @@ form button {
     background-position: 81% 0%;
   }
 }
-.gradient2 {
+.gradient2 { /*COLOR GRADIENTE ANIMADO DEL FONDO DE LOS OPINION BOXES EN EL INDEX
+ES EL GRADIENTE INVERSO AL FONDO DE LA SECCION Y LA PAGINA*/
   background: linear-gradient(166deg, #466B38, #DAD299);
   background-size: 400% 400%;
   -webkit-animation: backGrad 9s ease infinite;
@@ -444,7 +483,23 @@ form button {
   animation: backGrad 9s ease infinite;
 }
 
-.pulsar {
+/*-------------------------SCROLLBAR CUSTOM----------------*/
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #304a26;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  background: black url("../images/treeBark.jpg") repeat-y;
+  background-size: 26px 63px;
+}
+
+.pulsar { /*ANIMACION PARA PULSADORES DE LA PAGINA*/
   padding: 12px 24px;
   background-color: #466B38;
   font-family: "Gloria Hallelujah", cursive;
@@ -455,12 +510,13 @@ form button {
 }
 .pulsar:hover {
   transform: scale(1.1);
-  background-color: black !important;
+  background-color: #644117 !important;
 }
 .pulsar:active {
   transform: scale(0.9);
 }
 
+/*ANIMACION PARA LA BARRA DE NAVEGACION, AL PASAR EL MOUSE POR LOS ELEMENTOS APARECE UNA BARRITA DEBAJO*/
 .aniNav {
   padding-bottom: 2px;
   color: black;
@@ -515,8 +571,8 @@ form button {
 }
 
 .nav {
-  --bs-nav-link-color:black;
-  --bs-nav-link-hover-color: black;
+  --bs-nav-link-color:$color-border;
+  --bs-nav-link-hover-color: $color-border;
 }
 
 /*Media Queries*/
@@ -539,23 +595,25 @@ form button {
     padding-left: 0px;
   }
   #about h2 {
-    padding-top: 150px;
     font-size: 50px;
   }
   #opinion1 {
-    width: 10rem;
+    width: 14rem;
   }
   #opinion2 {
-    width: 10rem;
+    width: 14rem;
   }
   #opinion3 {
-    width: 10rem;
+    width: 14rem;
   }
   #boxClientes section div {
     display: flex;
     gap: 15px;
     justify-content: center;
     align-items: center;
+  }
+  .card-text {
+    font-size: 1.5rem;
   }
 }
 @media only screen and (max-width: 576px) {
@@ -605,8 +663,17 @@ form button {
   element.style {
     width: 100%;
   }
+  #opinion1 {
+    width: 14rem;
+  }
+  #opinion2 {
+    width: 14rem;
+  }
+  #opinion3 {
+    width: 14rem;
+  }
   .card-text {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 @media only screen and (max-width: 300px) {

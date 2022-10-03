@@ -264,7 +264,6 @@ footer div nav:hover {
 /*--------------paralax----------------*/
 .paralax, #reservarDos, #reservarUno, #imagenEntradaDos {
   display: flex;
-  border-bottom: solid black 5px;
   text-align: center;
   text-decoration: solid;
   /* Set a specific height */

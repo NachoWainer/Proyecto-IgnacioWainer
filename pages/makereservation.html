@@ -42,16 +42,16 @@
     <div class="formBox">
     <form class="row g-3">
         <div class="col-md-6">
-          <label for="inputEmail4" class="form-label">Name</label>
-          <input type="email" class="form-control" id="inputEmail4">
+          <label for="Name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="Name" name="Name" required>
         </div>
         <div class="col-12">
           <label for="inputAddress" class="form-label">Contact</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="email@address">
+          <input type="email" class="form-control" id="inputAddress" name="inputAdress" placeholder="email@address" required>
         </div>
         <div class="col-md-4">
-            <label for="inputState" class="form-label">How many guests?</label>
-            <select id="inputState" class="form-select">
+            <label for="inputGuests" class="form-label">How many guests?</label>
+            <select id="inputGuests" name="inputGuests" class="form-select" required>
               <option>1</option>
               <option selected>2</option>
               <option>3</option>
@@ -61,41 +61,41 @@
           </div>
        
         <div class="col-12">
+          
           <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="gridCheck">
-              <label class="form-check-label" for="gridCheck">
-                Monday
-              </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
-              Tuesday
+            <input class="form-check-input" type="radio" id="Monday" name="dateCheck" checked>
+            <label class="form-check-label" for="Monday">
+              Monday
             </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
-              Thursday
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
-              Wensday
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
-              Friday
-            </label>
-          </div>
-         
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" id="Tuesday" name="dateCheck">
+          <label class="form-check-label" for="Tuesday">
+            Tuesday
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" id="Wednesday" name="dateCheck">
+          <label class="form-check-label" for="Wednesday">
+            Wednesday
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" id="Thursday" name="dateCheck">
+          <label class="form-check-label" for="Thursday">
+            Thursday
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" id="Friday" name="dateCheck">
+          <label class="form-check-label" for="Friday">
+            Friday
+          </label>
+        </div>
         </div>
         <div class="col-md-4">
-            <label for="inputState" class="form-label">TIME</label>
-            <select id="inputState" class="form-select">
+            <label for="inputTime" class="form-label">TIME</label>
+            <select id="inputTime" name="inputTime" class="form-select">
               <option selected>22:00</option>
               <option>22:30</option>
               <option>23:00</option>

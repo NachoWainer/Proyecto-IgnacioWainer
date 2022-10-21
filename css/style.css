@@ -254,7 +254,7 @@ footer div nav:hover {
 
 .map {
   display: block;
-  height: 300px;
+  height: 200px;
   width: 400px;
   max-width: 100%;
   max-height: 25%;
@@ -280,14 +280,61 @@ footer div nav:hover {
 /*LOS ALIMENTOS SE ESTRUCTURAN POR SECCIONES NAVEGABLES POR UN NAV
 ORDENADOS POR CATEOGRIA EN 2 FILAS y COLUMNAS SUFICIENTES 
 CUANDO EL TAMAÑO SE HACE MUY PEQUEÑO PASA A 1 COLUMNA*/
+.arriba {
+  position: fixed;
+  bottom: 1vw;
+  right: 1vw;
+  z-index: 100;
+}
+.arriba a {
+  height: 64px;
+  width: 64px;
+}
+.arriba a button {
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  background-image: url("../images/hoja.png");
+  background-color: transparent;
+  border-color: transparent;
+}
+
 .comida {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+  padding-top: 20px;
+  row-gap: 10px;
+}
+@media only screen and (max-width: 1050px) {
+  .comida {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+.comida2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   justify-items: center;
   align-items: center;
   padding-top: 20px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
+  row-gap: 10px;
+}
+@media only screen and (max-width: 1050px) {
+  .comida2 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+
+.card-bodyMenu {
+  width: 248px;
+  height: 110px;
 }
 
 #navegadorMenu {
@@ -338,8 +385,8 @@ CUANDO EL TAMAÑO SE HACE MUY PEQUEÑO PASA A 1 COLUMNA*/
 UN FORM CON NOMBRE, DIA DE LA SEMANA, HORA y CANTIDAD DE PERSONAS
 ESTA DELIMITADO POR 2 IMAGENES DEL LUGAR CON PARALAX*/
 #reserve {
-  border-top: black solid 5px;
-  border-bottom: black solid 5px;
+  border-top: #644117 solid 5px;
+  border-bottom: #644117 solid 5px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 2fr;
@@ -351,8 +398,8 @@ ESTA DELIMITADO POR 2 IMAGENES DEL LUGAR CON PARALAX*/
 }
 
 .formBox {
-  border: black solid 5px;
-  background-color: #B0DAB9;
+  border: #644117 solid 5px;
+  background-color: #DAD299;
   font-family: "Gloria Hallelujah", cursive;
   font-size: large;
   display: flex;
@@ -360,6 +407,13 @@ ESTA DELIMITADO POR 2 IMAGENES DEL LUGAR CON PARALAX*/
   align-content: center;
   width: fit-content;
   justify-self: center;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+@media only screen and (max-width: 780px) {
+  .formBox {
+    width: 100% !important;
+  }
 }
 
 form button {
@@ -566,7 +620,7 @@ ES EL GRADIENTE INVERSO AL FONDO DE LA SECCION Y LA PAGINA*/
 }
 
 .nav-link:focus, .nav-link:hover {
-  color: black;
+  color: #DAD299;
 }
 
 .nav {
@@ -597,22 +651,23 @@ ES EL GRADIENTE INVERSO AL FONDO DE LA SECCION Y LA PAGINA*/
     font-size: 50px;
   }
   #opinion1 {
-    width: 14rem;
+    width: 30rem;
   }
   #opinion2 {
-    width: 14rem;
+    width: 30rem;
   }
   #opinion3 {
-    width: 14rem;
+    width: 30rem;
   }
   #boxClientes section div {
     display: flex;
-    gap: 15px;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-content: center;
+    gap: 10px;
   }
   .card-text {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 @media only screen and (max-width: 576px) {
@@ -653,6 +708,10 @@ ES EL GRADIENTE INVERSO AL FONDO DE LA SECCION Y LA PAGINA*/
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 0.25fr;
   }
+  .comida2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+  }
   .titulo {
     font-size: 60px;
   }
@@ -663,16 +722,16 @@ ES EL GRADIENTE INVERSO AL FONDO DE LA SECCION Y LA PAGINA*/
     width: 100%;
   }
   #opinion1 {
-    width: 14rem;
+    width: 20rem;
   }
   #opinion2 {
-    width: 14rem;
+    width: 20rem;
   }
   #opinion3 {
-    width: 14rem;
+    width: 20rem;
   }
   .card-text {
-    font-size: 1.25rem;
+    font-size: 2rem;
   }
 }
 @media only screen and (max-width: 300px) {
@@ -682,13 +741,6 @@ ES EL GRADIENTE INVERSO AL FONDO DE LA SECCION Y LA PAGINA*/
   #opinion1.card.opiniones.gradient2.style {
     width: 12rem;
   }
-  #boxClientes section div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    gap: 10px;
-  }
   .titulo {
     font-size: 50px;
   }
@@ -696,13 +748,13 @@ ES EL GRADIENTE INVERSO AL FONDO DE LA SECCION Y LA PAGINA*/
     width: 100%;
   }
   #opinion1 {
-    width: 10rem;
+    width: 100%;
   }
   #opinion2 {
-    width: 10rem;
+    width: 100%;
   }
   #opinion3 {
-    width: 10rem;
+    width: 100%;
   }
   .card-text {
     font-size: 15px;

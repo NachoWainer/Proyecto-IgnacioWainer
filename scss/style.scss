@@ -15,79 +15,12 @@ html{
 @import "./componentes/footer";
 @import "./base/extend";
 @import "./base/map";
+@import "./componentes/misc";
+@import "./componentes/menu";
+@import "./componentes/reserve.scss";
 
 
 
-
-/*------------MENU-------------------------*/
-/*LOS ALIMENTOS SE ESTRUCTURAN POR SECCIONES NAVEGABLES POR UN NAV
-ORDENADOS POR CATEOGRIA EN 2 FILAS y COLUMNAS SUFICIENTES 
-CUANDO EL TAMAÑO SE HACE MUY PEQUEÑO PASA A 1 COLUMNA*/
-.arriba{
-    position: fixed;
-    bottom: 1vw;
-    right: 1vw;
-    z-index: 50;
-   
-    a{
-        height: 64px;
-        width: 64px;
-        
-   
-    button{
-        height:64px ;
-        width: 64px;
-        border-radius: 50%;
-        background-image:url("../images/hoja.png");
-        
-        background-color: transparent;
-        border-color: transparent;
-       
-        
-    } }
-}
-
-.comida{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    justify-items: center;
-    align-items: center;
-    padding-top: 20px;
-    
-    row-gap: 10px;
-    @media only screen and (max-width: 1050px){
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-    }
-   
-}
-.comida2{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    justify-items: center;
-    align-items: center;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    row-gap: 10px;
-    @media only screen and (max-width: 1050px){
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr ;
-    }
-   
-
-}
-.card-bodyMenu{
-    width:248px;
-    height:110px; 
-}
-
-#navegadorMenu{
-    display: flex;
-    justify-content: center;
-    
-}
 
 .card{
     background-color: map-get($mapa-color-principal,normal);
@@ -103,129 +36,8 @@ CUANDO EL TAMAÑO SE HACE MUY PEQUEÑO PASA A 1 COLUMNA*/
     }}
 
 
-.menuOpcion{
-    background-color: $color-principal;
-   
-}
 
-/*TEXT AREA PARA ENVIAR SUGERENCIAS ACERCA DEL MENU*/
-#suggestions{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-bottom: $color-terciario solid 2px;
-    padding-bottom: 5px;
-    h2{
-        background-color: map-get($mapa-color-principal,normal);
-    }
-    input{
-        width: 500px;
-        height: 50px;
-
-    }
-}
-
-
-
-
-    /*-------------------RESERVAS-------------------------*/
-
-    /*APARTADO PARA REALIZAR LAS RESERVAS DEL RESTAURANTE
-    UN FORM CON NOMBRE, DIA DE LA SEMANA, HORA y CANTIDAD DE PERSONAS
-    ESTA DELIMITADO POR 2 IMAGENES DEL LUGAR CON PARALAX*/
-
-#reserve{
-    border-top: $color-border solid 5px;
-    border-bottom: $color-border solid 5px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 2fr;
-    justify-content: center;
-    padding-bottom: 70px;
-    h1{
-        padding-top: 70px;
-    }
-}
-
-.formBox{
-    border: $color-border solid 5px ;
-    background-color: map-get($map: $mapa-color-secundario, $key:normal);
-    font-family: 'Gloria Hallelujah', cursive;
-   font-size: large;
-   display: flex;
-   flex-direction: column;
-   align-content: center;
-   width: fit-content;
-   justify-self: center;
-   padding-left: 1rem;
-   padding-bottom: 1rem;
-   @media only screen and (max-width: 780px){
-    width: 100% !important;
-}
-
-   
-}
-
-
-form button{
-    font-family: 'Gloria Hallelujah', cursive;
-   
-}
-
-.form-control {
-        display: flex;
-        width: 50%;
-        padding: .375rem .75rem;
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 1.5;
-        color: #212529;
-        background-color: #fff;
-        background-clip: padding-box;
-        border: 1px solid #ced4da;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        border-radius: .375rem;
-        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    }
-.form-check-input:checked {
-        background-color: $color-principal;
-        border-color: $color-principal;
-    }
-.form-select{
-    &:focus{
-        border-color: $color-terciario;
-        border-top-color:$color-terciario ;
-        border-right-color:$color-terciario;
-        border-bottom-color:$color-terciario;
-        border-left-color: $color-terciario;
-        outline: 0;
-        outline-color: initial;
-        outline-style: initial;
-        outline-width: 0px;
-        box-shadow: 0 0 0 0.25rem $color-principal;
-    }
-}
-
-
-
-#reservarUno{
-    @extend .paralax;
-    background-image: url("../images/place/restaurant2.jpg");
-/* Set a specific height */
-}
-
-
-#reservarDos{
-    @extend .paralax;
-    background-image: url("../images/place/restaurante6.jpg");
-
-}
-
-
-
+  
 
 
 /*ANIMACIONES DE LOS DISTINTOS COMPONENTES*/
@@ -283,30 +95,7 @@ form button{
         -moz-animation: backGrad 9s ease infinite;
         animation: backGrad 9s ease infinite;
     } 
-/*-------------------------SCROLLBAR CUSTOM----------------*/
-
-/* width */
-::-webkit-scrollbar {
-    width: 15px;
-  }
   
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: map-get($mapa-color-principal,oscuro);
-    
-   
-
- 
-  }
-  
-  ::-webkit-scrollbar-thumb:vertical
-{
-    background:black url("../images/treeBark.jpg") repeat-y;
-    background-size:26px 63px;  
-    
-}
-  
-    
 
 .pulsar { /*ANIMACION PARA PULSADORES DE LA PAGINA*/
 	padding: 12px 24px;
@@ -426,7 +215,9 @@ form button{
         width: 30rem;
     }
     #boxClientes{
+        
         section{
+            
                 div{
                     display: flex;
                     flex-direction: column;

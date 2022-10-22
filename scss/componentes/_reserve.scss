@@ -1,0 +1,111 @@
+  /*-------------------RESERVAS-------------------------*/
+
+    /*APARTADO PARA REALIZAR LAS RESERVAS DEL RESTAURANTE
+    UN FORM CON NOMBRE, DIA DE LA SEMANA, HORA y CANTIDAD DE PERSONAS
+    ESTA DELIMITADO POR 2 IMAGENES DEL LUGAR CON PARALAX*/
+
+    #reserve{
+        border-top: $color-border solid 5px;
+        border-bottom: $color-border solid 5px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr;
+        justify-content: center;
+        padding-bottom: 70px;
+        h1{
+            padding-top: 70px;
+        }
+    }
+
+
+    /*-------------------------FORM DE RESERVA----------------*/
+    
+    .formBox{
+        border: $color-border solid 5px ;
+        background-color: map-get($map: $mapa-color-secundario, $key:normal);
+        font-family: 'Gloria Hallelujah', cursive;
+       font-size: large;
+       display: flex;
+       flex-direction: column;
+       align-content: center;
+       width: fit-content;
+       justify-self: center;
+       padding-left: 1rem;
+       padding-bottom: 1rem;
+       @media only screen and (max-width: 780px){
+        width: 100% !important;
+    }
+    }
+    
+    
+    form button{
+        font-family: 'Gloria Hallelujah', cursive;
+       
+    }
+    
+    .form-control {
+            display: flex;
+            width: 50%;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border-radius: .375rem;
+            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+            &:focus{
+                border-color: $color-terciario;
+                box-shadow: 0 0 0 0.25rem $color-principal;
+            }
+        }
+    .form-check-input{
+        &:checked{
+            background-color: $color-principal;
+            border-color: $color-principal;
+
+        }
+        &:focus{
+            background-color: $color-principal;
+            border-color: $color-principal;
+            box-shadow: 0 0 0 0.25rem $color-terciario;
+        }
+    }
+    
+    .form-select{
+        &:focus{
+            border-color: $color-terciario;
+            border-top-color:$color-terciario ;
+            border-right-color:$color-terciario;
+            border-bottom-color:$color-terciario;
+            border-left-color: $color-terciario;
+            outline: 0;
+            outline-color: initial;
+            outline-style: initial;
+            outline-width: 0px;
+            box-shadow: 0 0 0 0.25rem $color-principal;
+        }
+    }
+    
+    
+    /*-----------------imagenes en parallax-----------------*/
+    #reservarUno{
+        @extend .paralax;
+        background-image: url("../images/place/restaurant2.webp");
+    /* Set a specific height */
+    }
+    
+    
+    #reservarDos{
+        @extend .paralax;
+        background-image: url("../images/place/restaurante6.webp");
+    
+    }
+    
+    
+    

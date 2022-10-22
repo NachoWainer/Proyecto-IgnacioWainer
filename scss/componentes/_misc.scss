@@ -1,0 +1,47 @@
+/*FLECHA PARA IR ARRIBA EN MENU*/
+.arriba{
+    position: fixed;
+    bottom: 1vw;
+    right: 1vw;
+    z-index: 50;
+   
+    a{
+        height: 64px;
+        width: 64px; 
+        
+   
+    button{
+        height:64px ;
+        width: 64px;
+        border-radius: 50%;
+        background-image:url("../images/hoja.png");
+        
+        background-color: transparent;
+        border-color: transparent;
+       
+        
+    } }
+}
+
+/*-------------------------SCROLLBAR CUSTOM----------------*/
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: map-get($mapa-color-principal,oscuro);
+  }
+  
+  ::-webkit-scrollbar-thumb:vertical
+{
+    background:black url("../images/treeBark.webp") repeat-y;
+    background-size:26px 63px;  
+    
+}
+  
+  
+
+

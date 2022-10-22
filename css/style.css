@@ -107,7 +107,7 @@ body section h2 {
 }
 
 #imagenEntradaDos {
-  background-image: url("../images/place/restaurante4.jpg");
+  background-image: url("../images/place/restaurante4.webp");
 }
 @media only screen and (max-width: 576px) {
   #imagenEntradaDos {
@@ -256,9 +256,6 @@ footer div nav:hover {
   padding-left: 2px;
   padding-right: 2px;
 }
-#where p {
-  text-align: end;
-}
 
 .map {
   display: block;
@@ -283,11 +280,7 @@ footer div nav:hover {
   background-size: cover;
 }
 
-/*selector de colores*/
-/*------------MENU-------------------------*/
-/*LOS ALIMENTOS SE ESTRUCTURAN POR SECCIONES NAVEGABLES POR UN NAV
-ORDENADOS POR CATEOGRIA EN 2 FILAS y COLUMNAS SUFICIENTES 
-CUANDO EL TAMAÑO SE HACE MUY PEQUEÑO PASA A 1 COLUMNA*/
+/*selector de colores*/ /*FLECHA PARA IR ARRIBA EN MENU*/
 .arriba {
   position: fixed;
   bottom: 1vw;
@@ -307,6 +300,25 @@ CUANDO EL TAMAÑO SE HACE MUY PEQUEÑO PASA A 1 COLUMNA*/
   border-color: transparent;
 }
 
+/*-------------------------SCROLLBAR CUSTOM----------------*/
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #304a26;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  background: black url("../images/treeBark.webp") repeat-y;
+  background-size: 26px 63px;
+}
+
+/*------------MENU-------------------------*/
+/*LOS ALIMENTOS SE ESTRUCTURAN POR SECCIONES NAVEGABLES POR UN NAV
+ORDENADOS POR CATEOGRIA EN 2 FILAS y COLUMNAS COMIENZA EN 4, LUEGO 2 Y POR ULTIMO 1*/
 .comida {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -350,23 +362,6 @@ CUANDO EL TAMAÑO SE HACE MUY PEQUEÑO PASA A 1 COLUMNA*/
   justify-content: center;
 }
 
-.card {
-  background-color: #466B38;
-}
-
-.card-text {
-  font-family: "Gloria Hallelujah", cursive;
-  font-weight: bold;
-  font-size: 2rem;
-  text-align: center;
-  text-decoration: wavy;
-}
-@media only screen and (max-width: 1024px) {
-  .card-text {
-    font-size: 1.5rem;
-  }
-}
-
 .menuOpcion {
   background-color: #466B38;
 }
@@ -405,6 +400,7 @@ ESTA DELIMITADO POR 2 IMAGENES DEL LUGAR CON PARALAX*/
   padding-top: 70px;
 }
 
+/*-------------------------FORM DE RESERVA----------------*/
 .formBox {
   border: #644117 solid 5px;
   background-color: #DAD299;
@@ -445,10 +441,19 @@ form button {
   border-radius: 0.375rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+.form-control:focus {
+  border-color: #644117;
+  box-shadow: 0 0 0 0.25rem #466B38;
+}
 
 .form-check-input:checked {
   background-color: #466B38;
   border-color: #466B38;
+}
+.form-check-input:focus {
+  background-color: #466B38;
+  border-color: #466B38;
+  box-shadow: 0 0 0 0.25rem #644117;
 }
 
 .form-select:focus {
@@ -464,13 +469,31 @@ form button {
   box-shadow: 0 0 0 0.25rem #466B38;
 }
 
+/*-----------------imagenes en parallax-----------------*/
 #reservarUno {
-  background-image: url("../images/place/restaurant2.jpg");
+  background-image: url("../images/place/restaurant2.webp");
   /* Set a specific height */
 }
 
 #reservarDos {
-  background-image: url("../images/place/restaurante6.jpg");
+  background-image: url("../images/place/restaurante6.webp");
+}
+
+.card {
+  background-color: #466B38;
+}
+
+.card-text {
+  font-family: "Gloria Hallelujah", cursive;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  text-decoration: wavy;
+}
+@media only screen and (max-width: 1024px) {
+  .card-text {
+    font-size: 1.5rem;
+  }
 }
 
 /*ANIMACIONES DE LOS DISTINTOS COMPONENTES*/
@@ -555,22 +578,6 @@ ES EL GRADIENTE INVERSO AL FONDO DE LA SECCION Y LA PAGINA*/
   -webkit-animation: backGrad 9s ease infinite;
   -moz-animation: backGrad 9s ease infinite;
   animation: backGrad 9s ease infinite;
-}
-
-/*-------------------------SCROLLBAR CUSTOM----------------*/
-/* width */
-::-webkit-scrollbar {
-  width: 15px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #304a26;
-}
-
-::-webkit-scrollbar-thumb:vertical {
-  background: black url("../images/treeBark.jpg") repeat-y;
-  background-size: 26px 63px;
 }
 
 .pulsar { /*ANIMACION PARA PULSADORES DE LA PAGINA*/

@@ -13,6 +13,7 @@ footer{
     align-items: center;
     justify-items: center;
     z-index: 100;
+    
     div{
         nav{
             &:hover{
@@ -21,6 +22,7 @@ footer{
             }
         }
     }
+   
 }
 
 
@@ -32,6 +34,7 @@ footer{
     justify-self: baseline;
     align-self: baseline;
     height: 100%;
+   
     ul{
     justify-content: space-between;
    
@@ -45,9 +48,7 @@ footer{
                 }
             }
         }
-        p{
-            text-align: end;
-        }
+        
 }
 
 .map{

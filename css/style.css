@@ -49,7 +49,7 @@ html {
 
 .texto2 {
   font-family: "Amatic SC", cursive;
-  font-size: 2rem;
+  font-size: 4rem;
 }
 
 /*cabezal*/
@@ -229,6 +229,7 @@ footer {
   grid-template-rows: 1fr;
   align-items: center;
   justify-items: center;
+  z-index: 100;
 }
 footer div nav:hover {
   transform: scale(1.5);
@@ -240,8 +241,10 @@ footer div nav:hover {
 }
 
 #where {
+  padding-left: 10px;
   justify-self: baseline;
   align-self: baseline;
+  height: 100%;
 }
 #where ul {
   justify-content: space-between;
@@ -250,6 +253,11 @@ footer div nav:hover {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+#where p {
+  text-align: end;
 }
 
 .map {
@@ -284,7 +292,7 @@ CUANDO EL TAMAÑO SE HACE MUY PEQUEÑO PASA A 1 COLUMNA*/
   position: fixed;
   bottom: 1vw;
   right: 1vw;
-  z-index: 100;
+  z-index: 50;
 }
 .arriba a {
   height: 64px;
@@ -443,6 +451,19 @@ form button {
   border-color: #466B38;
 }
 
+.form-select:focus {
+  border-color: #644117;
+  border-top-color: #644117;
+  border-right-color: #644117;
+  border-bottom-color: #644117;
+  border-left-color: #644117;
+  outline: 0;
+  outline-color: initial;
+  outline-style: initial;
+  outline-width: 0px;
+  box-shadow: 0 0 0 0.25rem #466B38;
+}
+
 #reservarUno {
   background-image: url("../images/place/restaurant2.jpg");
   /* Set a specific height */
@@ -598,6 +619,7 @@ ES EL GRADIENTE INVERSO AL FONDO DE LA SECCION Y LA PAGINA*/
   color: black;
   position: relative;
   font-family: "Gloria Hallelujah", cursive;
+  font-size: 2rem;
 }
 
 .aniNavMenu::after {
@@ -620,7 +642,7 @@ ES EL GRADIENTE INVERSO AL FONDO DE LA SECCION Y LA PAGINA*/
 }
 
 .nav-link:focus, .nav-link:hover {
-  color: #DAD299;
+  color: #644117;
 }
 
 .nav {
